@@ -29,6 +29,6 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 
 data = {}
-res = wm.send_template(user_id, template_water)
-res = wm.send_template(user_id2, template_water)
+res = wm.send_template(user_id, template_water,data)
+res = wm.send_template(user_id2, template_water,data)
 print(res)
