@@ -29,5 +29,6 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 wea, temperature = get_weather()
 data = {}
-res = wm.send_template(user_id, template_water, data)
+res = wm.send_template(user_id, template_water)
+res = wm.send_template(user_id2, template_water)
 print(res)
