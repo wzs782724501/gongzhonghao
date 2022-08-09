@@ -1,13 +1,13 @@
 name: DrinkWater
 on:
   schedule:
-  - cron:  '0 0/1 0,23 * * ?'
+  - cron:  '0 0/1 0,23 * *'
   workflow_dispatch:
 
 jobs:
   send_message:
     runs-on: ubuntu-latest
-    name: send morning to your girlfriend
+    name: send drink to your girlfriend
 
     steps:
     - name: checkout
