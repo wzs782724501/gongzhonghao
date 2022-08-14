@@ -19,7 +19,6 @@ user_id2 = os.environ["USER_ID2"]
 template_id = os.environ["TEMPLATE_ID"]
 user_ids = os.environ["USER_IDS"]
 
-print(user_ids)
 
 
 def get_weather():
@@ -28,6 +27,7 @@ def get_weather():
   weather = res['data']['list'][0]
   
   print(weather)
+  print(user_ids)
   
   return weather['weather'], math.floor(weather['temp'])
 
