@@ -24,6 +24,9 @@ def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
   weather = res['data']['list'][0]
+  
+  print(weather)
+  
   return weather['weather'], math.floor(weather['temp'])
 
 def get_count():
@@ -55,5 +58,6 @@ data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":
 #res2 = wm.send_template(user_id2, template_id, data)
 
 for user in user_ids:
-    wm.send_template(user, template_id, data)
-print(res)
+    res = wm.send_template(user, template_id, data)
+    print(res)
+
