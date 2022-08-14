@@ -19,6 +19,8 @@ user_id2 = os.environ["USER_ID2"]
 template_id = os.environ["TEMPLATE_ID"]
 user_ids = os.environ["USER_IDS"]
 
+print(user_ids)
+
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
@@ -57,7 +59,7 @@ data = {"weather":{"value":wea},"temperature":{"value":temperature},"love_days":
 #res = wm.send_template(user_id, template_id, data)
 #res2 = wm.send_template(user_id2, template_id, data)
 
-for user in user_ids:
-    res = wm.send_template(user, template_id, data)
-    print(res)
+#for user in user_ids:
+    #res = wm.send_template(user, template_id, data)
+    #print(res)
 
