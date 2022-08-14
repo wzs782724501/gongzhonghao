@@ -27,7 +27,8 @@ def get_weather():
   weather = res['data']['list'][0]
   
   print(weather)
-  print(user_ids)
+  for user in user_ids:
+    print(user)
   
   return weather['weather'], math.floor(weather['temp'])
 
