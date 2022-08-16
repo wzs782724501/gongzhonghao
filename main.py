@@ -18,7 +18,6 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 user_id2 = os.environ["USER_ID2"]
 template_id = os.environ["TEMPLATE_ID"]
-user_ids = os.environ["USER_IDS"]
 
 def get_today():
   week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
@@ -33,9 +32,6 @@ def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
   res = requests.get(url).json()
   weather = res['data']['list'][0]
-  
-  print(weather)
-  
   return weather['weather'], math.floor(weather['temp']), math.floor(weather['low']), math.floor(weather['high'])
 
 def get_count():
